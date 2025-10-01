@@ -13,7 +13,10 @@ export default function Card(props) {
     <div>
         <p>
         {pokeInfo.name}
-        {console.log(pokeInfo.sprites)}
+        {console.log(pokeInfo.types)}
+        {pokeInfo.types &&
+          pokeInfo.types.map(type=>console.log(type.type.name))
+        }
         </p>{pokeInfo.sprites &&
 
         <img src={pokeInfo.sprites.front_default} alt="" />
